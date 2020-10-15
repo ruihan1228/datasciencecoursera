@@ -41,7 +41,7 @@ data.mean.std <- data[, c(1:2, mean.std + 2)]
 data.mean.std$act <- act.label[data.mean.std$act]
 
 # Label dataset with descriptive variable names
-gsub("\\()", "",colnames(data.mean.std))
+colnames(data.mean.std) <- gsub("\\()", "",colnames(data.mean.std))
 
 # Creates a second, independent tidy data set with the average of each variable 
 # for each activity and each subject
